@@ -62,6 +62,11 @@ def main() -> None:
 
     print(x) # Technically works and prints 3.14. Again, a bad idea!
 
+    #x = x + 1 # x is now 4.14
+    x += 1 # x is now 4.14
+
+    print(x) # Prints 4.14
+
 
 if __name__ == '__main__':
     main()

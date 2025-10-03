@@ -1,3 +1,10 @@
+# Python does not have constants
+# However, it has a convention. If you want a variable to never be changed,
+# name it in ALL_CAPS
+
+# Global constants are fine.
+# PI = 3.1415
+
 def main() -> None:
     # This is a single-line comment
 

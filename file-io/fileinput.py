@@ -6,9 +6,6 @@ from typing import TextIO
 # File I/O: File input / output. Write a program that reads data from files,
 # and / or writes data to files.
 
-def read_from_file(some_file: TextIO) -> list[int]:
-    # Body goes here...
-
 def main() -> None:
     # To read data from a file (i.e., file input), you first have to OPEN
     # the file for READING
@@ -26,6 +23,7 @@ def main() -> None:
             if first_line:
                 first_line = False
                 continue
+            line = line.strip()
             # Tokenization: You take a string with many tokens, and you extract
             # those tokens from it.
             # line = 'Guyer,Alex,26'

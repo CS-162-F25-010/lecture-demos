@@ -1,0 +1,35 @@
+Software design. One part of software design is evaluating code quality.
+
+Good vs bad code is complicated. Readability, modularity / reusability,
+maintainability (how easy it is to maintain, update the codebase), performance,
+scalability.
+
+Maintainability is our focus. A question of "how easy is it to change this code?"
+
+Encapsulation is a philosophy of code writing that can help improve
+maintainability. The theme is this: Encapsulation is, in some sense, the
+practice of "co-locating" or "bundling" data with the behavior that operates
+on that data.
+
+Encapsulation can help improve a codebase's maintainability. It can do this
+in two main ways: 1) it can help reign in coupling; 2) it can help establish
+class invariants.
+
+Coupling. Coupling describes a situation where modifying one piece of code
+requires modifying one or more OTHER pieces of code in addition. Coupling
+can make your code harder to change.
+
+There are various degrees and types of coupling. Coupling is often described
+as "loose" or "tight". Coupling can be "local" or "pervasive".
+
+Global variables often introduce tight, pervasive coupling where it isn't
+really necessary.
+
+Coupling is not really evil. It's inevitable. However:
+1. Some coupling is unnecessary.
+2. Coupling can often be isolated / contained.
+3. Coupling can often be moved around such that the components of code
+	with the largest amount of coupling are also the components of
+	code that need to change the least frequently.
+
+Object-oriented programming.

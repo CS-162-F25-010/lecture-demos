@@ -25,11 +25,28 @@ as "loose" or "tight". Coupling can be "local" or "pervasive".
 Global variables often introduce tight, pervasive coupling where it isn't
 really necessary.
 
+Interface: The parts of a component of code that other components interact with.
+	The interface describes "what" the code component does.
+
+Implementation: The rest. The parts of a component of code that other components
+	do not interact with. The implementation describes "how" the code
+	component does it.
+
+Coupling occurs at interfaces. Interfaces are hard to change!
+
 Coupling is not really evil. It's inevitable. However:
 1. Some coupling is unnecessary.
 2. Coupling can often be isolated / contained.
 3. Coupling can often be moved around such that the components of code
 	with the largest amount of coupling are also the components of
-	code that need to change the least frequently.
+	code that need to change the least frequently. The goal is to
+	create stable interfaces.
 
 Object-oriented programming.
+
+Encapsulation can be enforced with information hiding.
+
+Information hiding can also establish class invariants.
+
+A class invariant is a property of an object that is guaranteed to always
+be true.

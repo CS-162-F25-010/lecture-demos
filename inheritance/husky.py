@@ -29,10 +29,10 @@ class Husky(Dog):
     # in the Dog class. Inheritance is one-directional.
     _energy: int
     
-    def __init__(self, name: str) -> None:
+    def __init__(self, owners_name: str, name: str) -> None:
         # I want the Husky constructor to call the Dog constructor.
         # Here's how you do this
-        super().__init__(name)
+        super().__init__(owners_name, name)
         self._energy = 100
 
 
@@ -43,3 +43,17 @@ class Husky(Dog):
         elif self._energy > 20:
             sled.distance_traveled += 5
             self._energy -= 10
+
+    # We override the vocalize() method:
+    # (We define another method here with the same name, parameters, and return
+    # type)
+    def vocalize(self) -> None:
+        print('Awooo!')
+
+    # We should override the print() method.
+    def print(self) -> None:
+        # Instead of printing the husky's name here, we should call
+        # a method inherited from the Dog class on self, and IT can print
+        # the husky's name to the terminal.
+        super().print()
+        print(f'Energy: {self._energy}')

@@ -3,11 +3,15 @@ from dog import Dog
 from husky import Husky
 
 def main() -> None:
-    spot = Dog('Spot')
-    spot.bark()
+    spot = Dog('Jeff', 'Spot')
+    spot.vocalize()
+    spot.print()
 
-    fluffy = Husky('Fluffy')
-    fluffy.bark()
+    fluffy = Husky('Jill', 'Fluffy')
+    # When you call vocalize() on a Husky, by default, it calls
+    # the Husky class's vocalize() method (this calls the override)
+    fluffy.vocalize()
+    fluffy.print()
 
     santas_sleigh = Sled()
     fluffy.pull_sled(santas_sleigh)

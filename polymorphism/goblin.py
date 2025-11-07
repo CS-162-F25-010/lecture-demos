@@ -1,3 +1,8 @@
+from typing_extensions import override
+
+import random
+
+from player import Player
 from monster import Monster
 
 # The Goblin class inherits from the Monster class
@@ -7,6 +12,6 @@ class Goblin(Monster):
         # to be stored in the private _hp attribute
         super().__init__(5)
 
-    # The Goblin class does not override the attack() method, so when
-    # goblins attack the player, they simply execute the Monster
-    # class's attack() method (which the Goblin class inherits)
+    @override
+    def attack(self, p: Player) -> None:
+        p.take_damage(random.randint(1, 2))

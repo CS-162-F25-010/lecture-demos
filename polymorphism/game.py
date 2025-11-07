@@ -35,12 +35,46 @@ def game_loop(
 # can take on one of many types
 
 def main() -> None:
+    # There are two ways of casting in Python.
+    # 1. Explicitly cast things.
+    # 2. Implicitly cast things.
+
+    #print(int(3.14)) # This prints 3. Explicit type casting.
+
+    # Explicit type casting creates a new object of a new type, by performing
+    # a conversion on an existing object
+
+    x = 3.14 # x is a float
+    x = 3 # Now, x is an int. This is implicit type casting.
+
+    #print(type(x))
+
+    # Implicit type casting happens whenever you store an object of one
+    # type in a variable of another type. It's only possible when those two
+    # types are "compatible". Implicit type casting does not create a new
+    # object of a new type. It just stores the given object in the given
+    # variable.
+
+    # From MyPy's perspective, x is still a float
+    # From the interpreter's perspective, x refers to an int
+
     # Upcasting is a sort of type casting. Specifically, it refers to
     # the case where you type-cast a derived-class object to one of its
     # ancestor types.
 
     # Create the player object
     p = Player()
+
+    # The formal rule: Every variable actually has TWO types:
+    # 1. A static type. The "declared type" of the variable.
+    # 2. A dynamic type. The "actual type" of the variable at runtime.
+    # Dynamic types may change. Static types may not. However, a given
+    # expression's dynamic type must always be "compatible with" its static
+    # type.
+
+    # In most cases, a variable's static type and dynamic type are the same.
+    # The main case where they're different is in upcasting and polymorphism.
+    # The static type
 
     # Suppose we want the game to have 3 zombies, 4 vampires, and 5
     # goblins. Let's create a list for each (we should use list
@@ -58,6 +92,10 @@ def main() -> None:
 
     # Now run the game loop, executing turns until the game is over
     game_loop(p, monsters)
+
+    # Abstract classes cannot be instantiated.
+    # No object may ever have a dynamic type of Monster.
+    # Monster objects cannot be created.
     
 
 if __name__ == '__main__':

@@ -14,6 +14,8 @@ class Monster(ABC):
         # the self._hp attribute.
         self._hp = hp
 
+    # Very commonly, in other languages, you have to use a "virtual" keyword
+    # here
     # Abstract classes are allowed to have abstract methods.
     @abstractmethod
     def attack(self, p: Player) -> None:

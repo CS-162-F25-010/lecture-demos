@@ -7,8 +7,12 @@ def main() -> None:
     #### Furniture demonstration ####
     #################################
     
-    seth = Vendor[int]('Seth')
+    # seth = Vendor[int]('Seth')
 
+    # Vendor is not a class. It's a generic class. It's an "incomplete class"
+    # that has some missing pieces.
+
+    # However, Vendor[FurnitureItem] is an ACTUAL class.
     john = Vendor[FurnitureItem]('John')
     john.add_to_stock(FurnitureItem('Couch', 100.00))
     # john.add_to_stock(Automobile('Honda', 1998, 'Accord', 2500.00))

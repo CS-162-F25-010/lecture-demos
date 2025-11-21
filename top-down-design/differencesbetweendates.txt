@@ -1,0 +1,31 @@
+The problem that we want to solve: Given two dates, D1 and D2, determine the
+amount of days between them
+
+Ex: What is the difference between 11/22/2025 and 11/19/2025? The answer
+	would be 3
+
+Much harder ex: What is the difference between 11/21/2025 and 11/21/1999
+
+
+
+Top-down fashion: We start with the high-level objective, we break it down into
+a few smaller components, we figure out how those components interact, then
+we proceed in turn with those smaller components
+
+
+If D1 and D2 are in the same year:
+	return difference_between_dates_within_same_year(D1, D2)
+else:
+	Let's assume D1 < D2
+	total_difference = difference_between_dates_within_same_year(D1, Dec 31 of the year containing D1)
+	total_difference += 1
+	for each year y between D1 and D2, exclusive
+		total_difference += days_within_year(y)
+	total_difference += difference_between_dates_within_same_year(Jan 1 of the year containing D2, D2)
+
+
+Goal: Write pseudocode for a function / code component that determines the
+number of days in a given year. It does not have to handle all the low-level
+details; just a small breakdown of some of the high-level steps.
+
+(Solution can be found in the lecture notes :) )

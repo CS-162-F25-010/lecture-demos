@@ -1,0 +1,32 @@
+Software design is the practice of creating software design models prior to
+	implementation.
+
+The goal of software design is twofold:
+1) Figure out the low-level details
+2) Figure out how those low-level details can work together to achieve
+	the high-level objective
+
+
+
+One option is to use pseudocode. Basically English text that kind of looks
+like code.
+
+if x is less than five:
+	print something to the terminal
+
+
+
+So, how do we figure out the pseudocode?
+
+One very common methodology to software design is known as top-down design.
+The idea of top-down design is to start with the high-level goals, and break
+them down each into just a couple of slightly smaller steps / components.
+
+Then you figure out how those components work together to solve the entire
+problem.
+
+Then, you rinse and repeat with the smaller components. You look at each
+smaller component, and you break it down into a few slightly smaller components.
+
+You keep doing this until you have components that no longer need to be
+broken down any further. That's when your design is complete.

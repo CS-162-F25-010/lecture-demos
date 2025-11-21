@@ -11,8 +11,9 @@ def hello_world(n: int) -> None:
     if n > 1:
         hello_world(n - 1) # This is referred to as a "recursive call"
 
+
 def main() -> None:
-    hello_world(10)
+    hello_world(1000000)
 
 if __name__ == '__main__':
     main()
